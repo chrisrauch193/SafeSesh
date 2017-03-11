@@ -16,7 +16,6 @@ app.use(cookieSession({
 
 app.get("/", function(req,res) {
     res.send("Works");
-    res.end(200);
 });
 
 app.use(bodyParser.json());
