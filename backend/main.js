@@ -14,6 +14,11 @@ app.use(cookieSession({
     maxAge: 24 * 60 * 60 * 1000 // 24 hours
 }));
 
+app.get("/", function(req,res) {
+    res.send("Works");
+    res.end(200);
+});
+
 app.use(bodyParser.json());
 
 let trackers = {};
