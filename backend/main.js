@@ -41,6 +41,16 @@ app.post("/start", function(req, res) {
 
 app.get("/amountleft", function(req, res) {
     var acc_id = req.query.account_id;
+
+    if(!(account_id in trackers)) {
+        console.log("Account unknown in amount left EP...");
+        res.sendStatus(400);
+    }
+    else {
+        console.log("Giving amount for account " + acc_id);
+        let amount = trackers.moneyToSpend;
+        res.send(JSON.stringify({account_id:acc_id, amount:amount}))
+    }
 });
 
 app.post("/hookhandle", function(req, res) {
@@ -62,6 +72,9 @@ app.post("/hookhandle", function(req, res) {
                 console.log("This earned us £" + amount / 100);
             }
             tracker.updateMoney(req.body.data.amount);
+            if(tracker.moneyToSpend <= 0) {
+                delete trackers[account_id];
+            }
         }
         res.sendStatus(200);
     }
