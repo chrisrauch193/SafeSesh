@@ -63,8 +63,8 @@ app.post("/hookhandle", function(req, res) {
             }
             tracker.updateMoney(req.body.data.amount);
         }
+        res.sendStatus(200);
     }
-    res.sendStatus(204);
 });
 
 app.post("/quit", function(req, res) {
