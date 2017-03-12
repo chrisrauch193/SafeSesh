@@ -32,7 +32,7 @@ app.post("/start", function(req, res) {
     else {
         let secretToken = req.body.secret_token;
         let amount = req.body.amount;
-        trackers[accId] = new Tracker(secretToken, accId, amount);
+        trackers[accId] = new Tracker(secretToken, accId, amount*100);
         trackers[accId].registerWebHook();
         req.session.account_id = accId;
         res.sendStatus(200);
