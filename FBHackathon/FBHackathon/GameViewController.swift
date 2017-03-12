@@ -78,6 +78,9 @@ class GameViewController: UIViewController
         }
         else if(seconds == 0)
         {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.attempts -= 1
+            
             self.dismiss(animated: true, completion: nil)
             
 //            if(timer != nil)

@@ -51,13 +51,13 @@
                                     <action selector="startSesh:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UcE-KQ-51E"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0RH-oZ-i03" customClass="SpringLabel" customModule="FBHackathon" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0RH-oZ-i03" customClass="SpringLabel" customModule="FBHackathon" customModuleProvider="target">
                                 <rect key="frame" x="87" y="157" width="200" height="86"/>
-                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="70"/>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="59"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="HQF-cJ-nZn">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minimumValue="1" maximumValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="HQF-cJ-nZn">
                                 <rect key="frame" x="140" y="276" width="94" height="29"/>
                                 <connections>
                                     <action selector="stepperValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="tVQ-hG-sso"/>
@@ -154,8 +154,8 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mbc-7O-YKX">
-                                <rect key="frame" x="50" y="292" width="276" height="84"/>
-                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="70"/>
+                                <rect key="frame" x="62.5" y="295" width="251.5" height="77"/>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="64"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -171,10 +171,19 @@
                                     <segue destination="F2P-W6-mcX" kind="presentation" id="feX-xD-xtm"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlock" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53r-FV-rGs">
-                                <rect key="frame" x="10" y="487" width="343" height="66"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's test you before resetting your limit" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53r-FV-rGs">
+                                <rect key="frame" x="10" y="432" width="343" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="ujq-PP-C6Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attempts Left: 2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYk-9q-RMh">
+                                <rect key="frame" x="90" y="506" width="184" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="h3g-Um-hiu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="22"/>
                                 <nil key="textColor"/>
@@ -186,8 +195,9 @@
                             <constraint firstItem="6Ry-o2-fBn" firstAttribute="centerY" secondItem="Mbc-7O-YKX" secondAttribute="centerY" id="5QL-Cm-oFz"/>
                             <constraint firstItem="Dnd-6v-5zY" firstAttribute="leading" secondItem="tNc-aV-6Vs" secondAttribute="leading" id="7IP-Xb-SWo"/>
                             <constraint firstItem="Mbc-7O-YKX" firstAttribute="centerY" secondItem="tNc-aV-6Vs" secondAttribute="centerY" id="8YF-l4-Lcf"/>
-                            <constraint firstItem="53r-FV-rGs" firstAttribute="top" secondItem="6Ry-o2-fBn" secondAttribute="bottom" constant="89" id="HS1-6p-0nz"/>
+                            <constraint firstItem="53r-FV-rGs" firstAttribute="top" secondItem="6Ry-o2-fBn" secondAttribute="bottom" constant="34" id="HS1-6p-0nz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="D8g-nI-gGl" secondAttribute="trailing" constant="6" id="MgC-Fq-p7Z"/>
+                            <constraint firstItem="53r-FV-rGs" firstAttribute="top" secondItem="pYk-9q-RMh" secondAttribute="bottom" constant="-122" id="Xju-M9-cVS"/>
                             <constraint firstItem="Dnd-6v-5zY" firstAttribute="top" secondItem="tNc-aV-6Vs" secondAttribute="top" constant="1" id="bRj-ib-wUs"/>
                             <constraint firstItem="5Cc-8u-6I2" firstAttribute="top" secondItem="D8g-nI-gGl" secondAttribute="bottom" constant="454" id="dQB-tR-G7W"/>
                             <constraint firstAttribute="trailing" secondItem="Dnd-6v-5zY" secondAttribute="trailing" id="dTs-bI-iTE"/>
@@ -195,12 +205,17 @@
                             <constraint firstItem="Mbc-7O-YKX" firstAttribute="centerX" secondItem="tNc-aV-6Vs" secondAttribute="centerX" id="eXv-XH-dja"/>
                             <constraint firstItem="6Ry-o2-fBn" firstAttribute="centerX" secondItem="tNc-aV-6Vs" secondAttribute="centerX" id="lCQ-gt-kQG"/>
                             <constraint firstItem="D8g-nI-gGl" firstAttribute="leading" secondItem="tNc-aV-6Vs" secondAttribute="leadingMargin" constant="-6" id="mbB-Gb-vds"/>
+                            <constraint firstItem="pYk-9q-RMh" firstAttribute="centerX" secondItem="53r-FV-rGs" secondAttribute="centerX" id="nUv-78-vBw"/>
                             <constraint firstItem="53r-FV-rGs" firstAttribute="trailing" secondItem="D8g-nI-gGl" secondAttribute="trailing" id="pyO-nz-3iO"/>
                             <constraint firstAttribute="bottom" secondItem="Dnd-6v-5zY" secondAttribute="bottom" constant="-1" id="sFD-CN-JB0"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="amountValue" destination="Mbc-7O-YKX" id="Vsu-7d-z68"/>
+                        <outlet property="colorTapBtn" destination="01S-Jr-MtU" id="y7W-O7-5qb"/>
+                        <outlet property="numberBtn" destination="MQY-Ky-LX6" id="CVQ-th-KX8"/>
+                        <outlet property="numebrOfAttempts" destination="pYk-9q-RMh" id="t7r-4m-Acd"/>
+                        <outlet property="unlockLimit" destination="53r-FV-rGs" id="XPa-wf-0wK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3s-Ie-ZOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -232,10 +247,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="number" translatesAutoresizingMaskIntoConstraints="NO" id="wmC-2u-GrW">
-                                <rect key="frame" x="33" y="190" width="302" height="129"/>
+                                <rect key="frame" x="32.5" y="190" width="302" height="129"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2345" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDa-pF-AAI">
-                                <rect key="frame" x="104" y="213" width="149" height="82"/>
+                                <rect key="frame" x="104" y="213" width="148.5" height="82"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="82" id="1QV-k7-2VP"/>
                                 </constraints>
@@ -244,7 +259,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" background="input" translatesAutoresizingMaskIntoConstraints="NO" id="Tck-eK-5K1">
-                                <rect key="frame" x="61" y="326" width="255" height="110"/>
+                                <rect key="frame" x="60.5" y="326" width="255" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="0i9-G9-fNB"/>
                                 </constraints>
@@ -343,7 +358,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8x1-gc-fEK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="761" y="743"/>
+            <point key="canvasLocation" x="761" y="739"/>
         </scene>
     </scenes>
     <resources>

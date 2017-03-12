@@ -12,8 +12,6 @@
 		8B410CEA1E7464B600DB1AFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B410CE81E7464B600DB1AFA /* Main.storyboard */; };
 		8B410CEC1E7464B600DB1AFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B410CEB1E7464B600DB1AFA /* Assets.xcassets */; };
 		8B410CEF1E7464B600DB1AFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B410CED1E7464B600DB1AFA /* LaunchScreen.storyboard */; };
-		8B410CFA1E7464B600DB1AFA /* FBHackathonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B410CF91E7464B600DB1AFA /* FBHackathonTests.swift */; };
-		8B410D051E7464B600DB1AFA /* FBHackathonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B410D041E7464B600DB1AFA /* FBHackathonUITests.swift */; };
 		8B410D131E74857900DB1AFA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B410D121E74857900DB1AFA /* MainViewController.swift */; };
 		8B410D301E748E3B00DB1AFA /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B410D141E748E3B00DB1AFA /* AsyncButton.swift */; };
 		8B410D311E748E3B00DB1AFA /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B410D151E748E3B00DB1AFA /* AsyncImageView.swift */; };
@@ -49,23 +47,6 @@
 		8B410D541E74C4D500DB1AFA /* ColorTapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B410D531E74C4D500DB1AFA /* ColorTapViewController.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		8B410CF61E7464B600DB1AFA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8B410CD91E7464B600DB1AFA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8B410CE01E7464B600DB1AFA;
-			remoteInfo = FBHackathon;
-		};
-		8B410D011E7464B600DB1AFA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8B410CD91E7464B600DB1AFA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8B410CE01E7464B600DB1AFA;
-			remoteInfo = FBHackathon;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		8B410CE11E7464B600DB1AFA /* FBHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B410CE41E7464B600DB1AFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,12 +55,6 @@
 		8B410CEB1E7464B600DB1AFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B410CEE1E7464B600DB1AFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B410CF01E7464B600DB1AFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8B410CF51E7464B600DB1AFA /* FBHackathonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FBHackathonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B410CF91E7464B600DB1AFA /* FBHackathonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBHackathonTests.swift; sourceTree = "<group>"; };
-		8B410CFB1E7464B600DB1AFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8B410D001E7464B600DB1AFA /* FBHackathonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FBHackathonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B410D041E7464B600DB1AFA /* FBHackathonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBHackathonUITests.swift; sourceTree = "<group>"; };
-		8B410D061E7464B600DB1AFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B410D121E74857900DB1AFA /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8B410D141E748E3B00DB1AFA /* AsyncButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
 		8B410D151E748E3B00DB1AFA /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
@@ -123,20 +98,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B410CF21E7464B600DB1AFA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8B410CFD1E7464B600DB1AFA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -144,8 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				8B410CE31E7464B600DB1AFA /* FBHackathon */,
-				8B410CF81E7464B600DB1AFA /* FBHackathonTests */,
-				8B410D031E7464B600DB1AFA /* FBHackathonUITests */,
 				8B410CE21E7464B600DB1AFA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -154,8 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				8B410CE11E7464B600DB1AFA /* FBHackathon.app */,
-				8B410CF51E7464B600DB1AFA /* FBHackathonTests.xctest */,
-				8B410D001E7464B600DB1AFA /* FBHackathonUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,24 +134,6 @@
 				8B410D4C1E748E4300DB1AFA /* Spring */,
 			);
 			path = FBHackathon;
-			sourceTree = "<group>";
-		};
-		8B410CF81E7464B600DB1AFA /* FBHackathonTests */ = {
-			isa = PBXGroup;
-			children = (
-				8B410CF91E7464B600DB1AFA /* FBHackathonTests.swift */,
-				8B410CFB1E7464B600DB1AFA /* Info.plist */,
-			);
-			path = FBHackathonTests;
-			sourceTree = "<group>";
-		};
-		8B410D031E7464B600DB1AFA /* FBHackathonUITests */ = {
-			isa = PBXGroup;
-			children = (
-				8B410D041E7464B600DB1AFA /* FBHackathonUITests.swift */,
-				8B410D061E7464B600DB1AFA /* Info.plist */,
-			);
-			path = FBHackathonUITests;
 			sourceTree = "<group>";
 		};
 		8B410D4C1E748E4300DB1AFA /* Spring */ = {
@@ -252,42 +191,6 @@
 			productReference = 8B410CE11E7464B600DB1AFA /* FBHackathon.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8B410CF41E7464B600DB1AFA /* FBHackathonTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8B410D0C1E7464B600DB1AFA /* Build configuration list for PBXNativeTarget "FBHackathonTests" */;
-			buildPhases = (
-				8B410CF11E7464B600DB1AFA /* Sources */,
-				8B410CF21E7464B600DB1AFA /* Frameworks */,
-				8B410CF31E7464B600DB1AFA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8B410CF71E7464B600DB1AFA /* PBXTargetDependency */,
-			);
-			name = FBHackathonTests;
-			productName = FBHackathonTests;
-			productReference = 8B410CF51E7464B600DB1AFA /* FBHackathonTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		8B410CFF1E7464B600DB1AFA /* FBHackathonUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8B410D0F1E7464B600DB1AFA /* Build configuration list for PBXNativeTarget "FBHackathonUITests" */;
-			buildPhases = (
-				8B410CFC1E7464B600DB1AFA /* Sources */,
-				8B410CFD1E7464B600DB1AFA /* Frameworks */,
-				8B410CFE1E7464B600DB1AFA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8B410D021E7464B600DB1AFA /* PBXTargetDependency */,
-			);
-			name = FBHackathonUITests;
-			productName = FBHackathonUITests;
-			productReference = 8B410D001E7464B600DB1AFA /* FBHackathonUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -302,18 +205,6 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 2R8KNQM8C5;
 						ProvisioningStyle = Automatic;
-					};
-					8B410CF41E7464B600DB1AFA = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2R8KNQM8C5;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 8B410CE01E7464B600DB1AFA;
-					};
-					8B410CFF1E7464B600DB1AFA = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2R8KNQM8C5;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 8B410CE01E7464B600DB1AFA;
 					};
 				};
 			};
@@ -331,8 +222,6 @@
 			projectRoot = "";
 			targets = (
 				8B410CE01E7464B600DB1AFA /* FBHackathon */,
-				8B410CF41E7464B600DB1AFA /* FBHackathonTests */,
-				8B410CFF1E7464B600DB1AFA /* FBHackathonUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -347,20 +236,6 @@
 				8B410D341E748E3B00DB1AFA /* LoadingView.xib in Resources */,
 				8B410CEC1E7464B600DB1AFA /* Assets.xcassets in Resources */,
 				8B410CEA1E7464B600DB1AFA /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8B410CF31E7464B600DB1AFA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8B410CFE1E7464B600DB1AFA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,36 +282,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B410CF11E7464B600DB1AFA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8B410CFA1E7464B600DB1AFA /* FBHackathonTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8B410CFC1E7464B600DB1AFA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8B410D051E7464B600DB1AFA /* FBHackathonUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		8B410CF71E7464B600DB1AFA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8B410CE01E7464B600DB1AFA /* FBHackathon */;
-			targetProxy = 8B410CF61E7464B600DB1AFA /* PBXContainerItemProxy */;
-		};
-		8B410D021E7464B600DB1AFA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8B410CE01E7464B600DB1AFA /* FBHackathon */;
-			targetProxy = 8B410D011E7464B600DB1AFA /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8B410CE81E7464B600DB1AFA /* Main.storyboard */ = {
@@ -577,64 +423,6 @@
 			};
 			name = Release;
 		};
-		8B410D0D1E7464B600DB1AFA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 2R8KNQM8C5;
-				INFOPLIST_FILE = FBHackathonTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.carrotapps.FBHackathonTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FBHackathon.app/FBHackathon";
-			};
-			name = Debug;
-		};
-		8B410D0E1E7464B600DB1AFA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 2R8KNQM8C5;
-				INFOPLIST_FILE = FBHackathonTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.carrotapps.FBHackathonTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FBHackathon.app/FBHackathon";
-			};
-			name = Release;
-		};
-		8B410D101E7464B600DB1AFA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 2R8KNQM8C5;
-				INFOPLIST_FILE = FBHackathonUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.carrotapps.FBHackathonUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = FBHackathon;
-			};
-			name = Debug;
-		};
-		8B410D111E7464B600DB1AFA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 2R8KNQM8C5;
-				INFOPLIST_FILE = FBHackathonUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.carrotapps.FBHackathonUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = FBHackathon;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -654,22 +442,7 @@
 				8B410D0B1E7464B600DB1AFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		8B410D0C1E7464B600DB1AFA /* Build configuration list for PBXNativeTarget "FBHackathonTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8B410D0D1E7464B600DB1AFA /* Debug */,
-				8B410D0E1E7464B600DB1AFA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		8B410D0F1E7464B600DB1AFA /* Build configuration list for PBXNativeTarget "FBHackathonUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8B410D101E7464B600DB1AFA /* Debug */,
-				8B410D111E7464B600DB1AFA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,9 +7,14 @@
 
 import UIKit
 
+
 class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
 
-    var value:Int!
+    var value:Double!
+    
+    let USER_ID = "acc_00009CNhj7lD8LhVXxIhP7"
+    
+    let SECRET_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaSI6Im9hdXRoY2xpZW50XzAwMDA5NFB2SU5ER3pUM2s2dHo4anAiLCJleHAiOjE0ODkzMTQ3NzQsImlhdCI6MTQ4OTI5MzE3NCwianRpIjoidG9rXzAwMDA5SUhJeG82ZDZiVFl2VzRYUnAiLCJ1aSI6InVzZXJfMDAwMDlBS200eEFNdlpnUFQ3U21iUiIsInYiOiIyIn0.w0VXRm8vLgfjocEO9n_yi8ojYn-jEcu2wqKFzfPKueg"
     
     let transition = BubbleTransition()
 
@@ -18,8 +23,36 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     @IBOutlet var stepperLabel: SpringLabel!
     
     @IBAction func startSesh(_ sender: UIStepper) {
+
         let destinationVC:MainViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainViewController
         destinationVC.amount = value
+        
+        var req = URLRequest(url: URL(string:"http://ungurianu.com/safesesh/start")!)
+        
+        req.httpMethod = "POST"
+        
+        let postString = "{\"account_id\":\"\(USER_ID)\", \"secret_token\":\"\(SECRET_TOKEN)\", \"amount\":\(value!)}"
+        print(postString)
+        req.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        req.httpBody = postString.data(using:.utf8)
+        
+        let task = URLSession.shared.dataTask(with: req) { data, response, error in
+            guard let data = data, error == nil else {                                                 // check for fundamental networking error
+                print("error=\(error)")
+                return
+            }
+            
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
+                print("statusCode should be 200, but is \(httpStatus.statusCode)")
+                print("response = \(response)")
+            }
+            
+            let responseString = String(data: data, encoding: .utf8)
+            print("responseString = \(responseString)")
+        }
+        task.resume()
+        
+        
         
         // do the transition
         destinationVC.transitioningDelegate = self
@@ -30,14 +63,14 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
         
-        if Int(sender.value) > value {
+        if sender.value > value {
             stepperLabel.animation = "pop"
         } else {
             stepperLabel.animation = "squeeze"
         }
         
-        stepperLabel.text = "£\(Int(sender.value).description)"
-        value = Int(sender.value)
+        stepperLabel.text = "£\(String(format:"%.2f",sender.value))"
+        value = sender.value
         
         stepperLabel.animate()
     }
@@ -45,8 +78,8 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        value = Int(stepper.value)
-        stepperLabel.text = "£\(String(value))"
+        value = stepper.value
+        stepperLabel.text = "£\(String(format:"%.2f",value))"
 
         startButton.layer.cornerRadius = 5
     }

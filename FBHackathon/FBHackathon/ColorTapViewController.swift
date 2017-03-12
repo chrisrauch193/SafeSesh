@@ -60,6 +60,9 @@ class ColorTapViewController: UIViewController {
             }else{
                 result.text = "Your average result is: \(String(format: "%.2f",finalResult)) seconds. \n You need to stop spending 🛑"
                 
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.attempts -= 1
+
                 DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                     self.dismiss(animated: true, completion: nil)
                 }
