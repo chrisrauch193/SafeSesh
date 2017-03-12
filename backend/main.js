@@ -73,9 +73,6 @@ app.post("/hookhandle", function(req, res) {
             else {
                 console.log("This earned us £" + amount / 100);
             }
-            if(tracker.moneyToSpend <= 0) {
-                delete trackers[account_id];
-            }
         }
         res.sendStatus(200);
     }
