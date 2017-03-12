@@ -43,7 +43,7 @@ app.post("/hookhandle", function(req, res) {
     console.log("Body: " + JSON.stringify(req.body));
     let account_id = req.body.data.account_id;
     if(!(account_id in trackers)) {
-        console.err("Got callback from something not in our tracker");
+        console.log("Got callback from something not in our tracker");
         res.sendStatus(400);
     }
     else {
