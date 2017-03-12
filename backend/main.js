@@ -27,7 +27,8 @@ app.post("/start", function(req, res) {
     let accId = req.body.account_id;
     if(accId in trackers) {
         console.log(`Account id ${accId} already in trackers`);
-        res.sendStatus(400);
+        trackers[accId].moneyToSpend =req.body.amount;
+        res.sendStatus(200);
     }
     else {
         let secretToken = req.body.secret_token;
