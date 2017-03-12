@@ -3,7 +3,6 @@
  */
 
 var numOfTries = 3;
-var tid = setTimeout(mycode, 2000);
 
 var startingBalance;
 var spendingLimit;
@@ -17,6 +16,7 @@ var gameReadyToClick = false;
 var createdTime = 0;
 var clickedTime = 0;
 var gameMode = false;
+var missattempt = false;
 var timer;
 
 function resetPage() {
@@ -38,7 +38,7 @@ function resetPage() {
     $('#game').hide();
     $('input.currency').currencyInput();
     $('#reactionTime').text(0);
-    $('html').css('background-color', '#296aff');
+    //$('html').css('background-color', '#296aff');
     $('#loseMessage').hide();
 }
 
@@ -151,7 +151,7 @@ function startGame() {
     $('#sesh').hide();
     $('#limitReached').hide();
     $('#game').show();
-    $('html').css('background-color', '#ff5044');
+    //$('html').css('background-color', '#ff5044');
     $('#attemptCount').html("Attempt: " + (playCount));
     gameMode = true;
 
@@ -160,7 +160,7 @@ function startGame() {
 
 
     timer = setTimeout(function () {
-        $('html').css('background-color', '#57ff74');
+        //$('html').css('background-color', '#57ff74');
         gameReadyToClick = true;
         createdTime = Date.now();
     }, time);
@@ -171,7 +171,6 @@ function judgeResult() {
     gameMode = false;
     gameReadyToClick = false;
     if (averageReactionTime < 0.5 && averageReactionTime > 0.1) {
-        numOfTries = 3;
         resetPage();
     } else {
         losePage();
@@ -179,41 +178,16 @@ function judgeResult() {
 }
 
 function losePage() {
-    resetPage();
     $('#input').hide();
     $('#sesh').hide();
     $('#limitReached').show();
     $('#game').hide();
-    $('html').css('background-color', '#296aff');
-    numOfTries--;
+    //$('html').css('background-color', '#296aff');
     $('#numOfTriesLeft').html("Attempts Left:" + numOfTries);
-
     if (numOfTries < 1) {
         $('#lossMessage').show();
         $('#startGameButton').hide();
+    } else {
+        numOfTries--;
     }
-}
-
-function retriever() {
-    //Do code here
-
-    //Code for when transaction is made
-    spendingLimit -= transactionAmount;
-    $('#spendingLimit').html("£" + spendingLimit);
-    if (spendingLimit < 0) {
-        abortTimer();
-        canBuyDrinks = false;
-        $('#input').hide();
-        $('#sesh').hide();
-        $('#limitReached').show();
-        $('#game').hide();
-        $('#loseMessage').hide();
-        $('#numOfTriesLeft').html("Attempts Left:" + numOfTries);
-    }
-
-
-    tid = setTimeout(mycode, 2000);
-}
-function abortTimer() { // to be called when you want to stop the timer
-    clearTimeout(tid);
 }

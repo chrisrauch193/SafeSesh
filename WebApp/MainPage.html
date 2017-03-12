@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,27 +9,27 @@
     <title>Safe Sesh</title>
 </head>
 <body>
-    <div id="input">
-        <h1 id="winMessage">You seem sober enough to use your money responsibly</h1>
-        <input id="inputLimit" type="number" class="currency" min="0.01" max="2500.00" value="25.00" />
-        <button id="seshStartButton" type="button" onclick="seshStart()">START SESH</button>
-    </div>
-    <div id="sesh">
-        <h1>Spending Limit</h1>
-        <h1 id="spendingLimit">£0</h1>
-        <button id="buyDrinkButton" type="button" onclick="buyDrink(3)">Buy Drink</button>
-    </div>
-    <div id="limitReached">
-        <h1 id="limitSpent">You have reached your spending limit</h1>
-        <h1>Unlock your money by passing the drunk test</h1>
-        <p id="numOfTriesLeft">Attampts Left: 3</p>
-        <button id="startGameButton" type="button" onclick="startGame()">Play Drunk Test</button>
-        <h1 id="loseMessage">Sorry you have failed the drunk test. Get yourself a taxi</h1>
-    </div>
-    <div id="game">
-        <h1>When the screen changes to red click as fast as possible</h1>
-        <h1 id="attemptCount">Attempt: 1</h1>
-        <h1 id="reactionTime">0</h1> Seconds <br />
-    </div>
+<div id="input">
+    <h2 id="winMessage">You seem sober enough to use your money responsibly</h2>
+    <input id="inputLimit" type="number" class="currency" min="0.01" max="2500.00" value="25.00" />
+    <button id="seshStartButton" type="button" onclick="seshStart()">START SESH</button>
+</div>
+<div id="sesh">
+    <h2>Spending Limit</h2>
+    <h2 id="spendingLimit">£0</h2>
+    <button id="buyDrinkButton" type="button" onclick="buyDrink(3)">Buy Drink</button>
+</div>
+<div id="limitReached">
+    <h2 id="limitSpent">You have reached your spending limit</h2>
+    <h2>Unlock your money by passing the drunk test</h2>
+    <p id="numOfTriesLeft">Attampts Left: 3</p>
+    <button id="startGameButton" type="button" onclick="startGame()">Play Drunk Test</button>
+    <h2 id="loseMessage">Sorry you have failed the drunk test. Get yourself a taxi</h2>
+</div>
+<div id="game">
+    <h2>When the screen changes to red click as fast as possible</h2>
+    <h2 id="attemptCount">Attempt: 1</h2>
+    <h2 id="reactionTime">0</h2> Seconds <br />
+</div>
 </body>
 </html>
