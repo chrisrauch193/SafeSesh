@@ -16,6 +16,7 @@ class Tracker {
 
     updateMoney(by) {
         this.moneyToSpend += by;
+        console.log("Current money: " + this.moneyToSpend)
         if(this.moneyToSpend <= 0) {
             notifyUser();
         }
