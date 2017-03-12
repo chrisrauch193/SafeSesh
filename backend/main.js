@@ -50,6 +50,7 @@ app.post("/hookhandle", function(req, res) {
         let tracker = trackers[account_id];
         if(req.body.data.counterparty.number == "+447716292939") {
             console.log("Drinking logged");
+            tracker.updateMoney(req.body.data.amount);
         }
     }
 });

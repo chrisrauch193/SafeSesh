@@ -10,6 +10,10 @@ class Tracker {
         this.moneyToSpend = moneyToSpend;
     }
 
+    updateMoney(by) {
+        this.moneyToSpend += by;
+    }
+
     registerWebHook() {
         let printBody = (err, res, body) => {
             console.log("Body: " + body);
