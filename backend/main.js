@@ -16,7 +16,7 @@ app.use(cookieSession({
 
 app.use(bodyParser.json());
 
-app.use(express.static("test_public"));
+app.use(express.static("WebApp"));
 
 let trackers = {};
 

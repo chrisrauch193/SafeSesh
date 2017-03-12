@@ -15,23 +15,4 @@
             <button id="clickme">Click me</button>
         </div>
     </body>
-
-    <script>
-        function sendData() {
-            var amount = $("input[name=amount]").val();
-
-            $.ajax( {   url:"http://ungurianu.com/safesesh/start",
-                        type:"POST",
-                        processData: false,
-                        contentType : 'application/json',
-                        data: JSON.stringify({
-                            account_id:"acc_00009CNhj7lD8LhVXxIhP7",
-                            secret_token:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaSI6Im9hdXRoY2xpZW50XzAwMDA5NFB2SU5ER3pUM2s2dHo4anAiLCJleHAiOjE0ODkzMTQ3NzQsImlhdCI6MTQ4OTI5MzE3NCwianRpIjoidG9rXzAwMDA5SUhJeG82ZDZiVFl2VzRYUnAiLCJ1aSI6InVzZXJfMDAwMDlBS200eEFNdlpnUFQ3U21iUiIsInYiOiIyIn0.w0VXRm8vLgfjocEO9n_yi8ojYn-jEcu2wqKFzfPKueg",
-                            amount:amount
-                        })
-            });
-        }
-
-        document.getElementById('clickme').onclick = sendData;
-    </script>
 </html>
