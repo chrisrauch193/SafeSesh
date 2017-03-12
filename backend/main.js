@@ -47,7 +47,7 @@ app.post("/hookhandle", function(req, res) {
         res.sendStatus(400);
     }
     else {
-        let tracker = trackers(account_id);
+        let tracker = trackers[account_id];
         if(req.body.data.counterparty.number == "+447716292939") {
             console.log("Drinking logged");
         }
