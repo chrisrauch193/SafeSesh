@@ -40,6 +40,7 @@ app.post("/start", function(req, res) {
 });
 
 app.post("/hookhandle", function(req, res) {
+    console.log("Body: " + req.body);
     let account_id = app.body.data.account_id;
     if(!(account_id in trackers)) {
         console.err("Got callback from something not in our tracker");
