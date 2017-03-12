@@ -88,7 +88,6 @@ class ColorTapViewController: UIViewController {
         colorLabel.text = "Tap when changed to \(colorNames[rNum])"
         
         seconds = Int(arc4random_uniform(5) + 1)
-        print(seconds)
         timer = Timer.scheduledTimer(timeInterval: TimeInterval(seconds), target:self, selector:#selector(onUpdateTimer), userInfo:nil, repeats:false)
     }
     

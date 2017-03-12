@@ -81,16 +81,11 @@ class GameViewController: UIViewController
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.attempts -= 1
             
-            self.dismiss(animated: true, completion: nil)
+            timer?.invalidate()
             
-//            if(timer != nil)
-//            {
-//                timer!.invalidate()
-//                timer = nil
-//                
-//                updateTimeLabel()
-//                setRandomNumberLabel()
-//            }   
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.dismiss(animated: true, completion: nil)
+            }
         }
     }
     
@@ -106,33 +101,6 @@ class GameViewController: UIViewController
             
             timeLabel!.text = "\(min_p):\(sec_p)"
         }
-    }
-    
-    func showHUDWithAnswer(isRight:Bool)
-    {
-        var imageView:UIImageView?
-        
-        if isRight
-        {
-            imageView = UIImageView(image: UIImage(named:"thumbs-up"))
-        }
-        else
-        {
-            imageView = UIImageView(image: UIImage(named:"thumbs-down"))
-        }
-        
-//        if(imageView != nil)
-//        {
-//            hud?.mode = MBProgressHUDMode.customView
-//            hud?.customView = imageView
-//            
-//            hud?.show(animated: true)
-//            
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-//                self.hud?.hide(animated: true)
-//                self.inputField?.text = ""
-//            }
-//        }
     }
     
     func setRandomNumberLabel()
