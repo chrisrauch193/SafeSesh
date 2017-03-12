@@ -70,6 +70,7 @@ $(document).ready(function() {
     resetPage();
     $('#winMessage').hide();
     $('#lossMessage').hide();
+
 });
 
 function arrayMax(arr) {
@@ -133,6 +134,7 @@ function seshStart() {
     spendingLimit = $('#inputLimit').val();
     $('#spendingLimit').html("£" + spendingLimit);
     sendData();
+    retriever();
 }
 
 function buyDrink(transactionAmount) {
@@ -211,7 +213,7 @@ function retriever() {
         spendingLimit = data.amount;
         //Code for when transaction is made
         $('#spendingLimit').html("£" + spendingLimit);
-        if (spendingLimit < 0) {
+        if (spendingLimit < 1) {
             abortTimer();
             canBuyDrinks = false;
             $('#input').hide();
@@ -221,11 +223,9 @@ function retriever() {
             $('#loseMessage').hide();
             $('#numOfTriesLeft').html("Attempts Left:" + numOfTries);
         }
+
+        tid = setTimeout(retriever,2000);
     });
-
-
-
-    tid = setTimeout(mycode, 2000);
 }
 function abortTimer() { // to be called when you want to stop the timer
     clearTimeout(tid);
