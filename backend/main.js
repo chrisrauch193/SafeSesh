@@ -43,7 +43,7 @@ app.get("/amountleft", function(req, res) {
     console.log("Url received: " + req.url);
     var acc_id = req.query.account_id;
 
-    if(!(account_id in trackers)) {
+    if(!(acc_id in trackers)) {
         console.log("Account unknown in amount left EP...");
         res.sendStatus(400);
     }
