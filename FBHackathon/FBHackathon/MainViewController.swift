@@ -72,8 +72,7 @@ class MainViewController: UIViewController {
             do {
                 let obj = try JSONSerialization.jsonObject(with: data) as? [String: Any]
                 print(obj!)
-                self.amount = obj?["amount"] as! Double
-            //    self.amount /= 100.0
+                self.amount = obj?["amount"] as! Double / 100.0
                 
                 print("amount in request: \(self.amount) ")
             } catch {
@@ -95,7 +94,6 @@ class MainViewController: UIViewController {
             numberBtn.isHidden = false
             colorTapBtn.isHidden = false
             numebrOfAttempts.isHidden = false
-
         }
     }
     
