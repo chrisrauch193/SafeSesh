@@ -241,7 +241,7 @@ function sendData() {
                 data: JSON.stringify({
                     account_id:USER_ID,
                     secret_token:SECRET_TOKEN,
-                    amount:spendingLimit
+                    amount:spendingLimit | 0
                 })
     });
 }
