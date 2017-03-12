@@ -207,7 +207,7 @@ function losePage() {
 function retriever() {
     //Do code here
     $.ajax( {
-        type:"GET"
+        type:"GET",
         url:"http://ungurianu.com/safesesh/amountleft?account_id=" + USER_ID,
         dataType:"json",
         success: function(data, status) {
