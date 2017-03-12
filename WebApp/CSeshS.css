@@ -1,21 +1,3 @@
-/*html {*/
-    /*background-color: #296aff;*/
-/*}*/
-
-.currency {
-    padding-left:12px;
-}
-
-.currency-symbol {
-    position:absolute;
-    padding: 2px 5px;
-}
-
-.disabled {
-    color: #999;
-}
-
-
 .currency {
     padding-left:12px;
 }
@@ -26,8 +8,14 @@
 }
 
 .button {
-    margin:auto;
-    display:block;
+    background-color: #001736; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
 
 .flex-container {
@@ -45,16 +33,17 @@
 
 .flex-item#Title {
     background-color: white;
-    margin-bottom: 500px;
+    margin-bottom: 300px;
     padding-bottom: 20px;
 }
 
 .flex-item{
-    align-content: center;
-    width: 100%;
-    height: 350px;
-    margin-bottom: 0px;
-    opacity: 1;
+  background-color: white;
+    width: 96%;
+    padding-left:2%;
+    padding-right:2%;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 img {
@@ -63,31 +52,40 @@ img {
 }
 
 body {
-    font-family: sans-serif;
-    background: url(http://www.shortsbrewing.com/wp-content/uploads/2013/03/Anniversary-Party-Crowded-Bar.jpg) no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+  color:#001736;
+   font-family: sans-serif;
+   background: url(http://www.shortsbrewing.com/wp-content/uploads/2013/03/Anniversary-Party-Crowded-Bar.jpg) no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
 }
 
 h2 {
-    text-align: center;
+  color:#001736;
+  font-size: 300%;
+  text-align: left;
+  /*color: white;  /* Fallback: assume this color ON TOP of image */*/
+  /*background: url(https://media.giphy.com/media/xTiTnJvAvKmdVLUp9u/giphy.gif);
+  background-size: cover;*/
+  /*-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;*/
 }
 
 div {
-    width: 100%;
+  width: 100%;
 }
 
 span {
-    display: inline-block;
-    vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 h1 {
-    font-size: 1500%;
-    text-align: center;
-    color: white;  /* Fallback: assume this color ON TOP of image */
-    background: url(https://media.giphy.com/media/xTiTnJvAvKmdVLUp9u/giphy.gif) no-repeat;
-    background-size: cover;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+   color:#001736;
+   font-size: 1500%;
+   text-align: center;
+   color: white;  /* Fallback: assume this color ON TOP of image */
+   background: url(https://media.giphy.com/media/xTiTnJvAvKmdVLUp9u/giphy.gif) no-repeat;
+   background-size: cover;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
 }

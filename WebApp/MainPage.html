@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,28 +7,58 @@
     <script src="SeshScript.js"></script>
     <title>Safe Sesh</title>
 </head>
-<body>
-<div id="input">
-    <h2 id="winMessage">You seem sober enough to use your money responsibly</h2>
-    <input id="inputLimit" type="number" class="currency" min="0.01" max="2500.00" value="25.00" />
-    <button id="seshStartButton" type="button" onclick="seshStart()">START SESH</button>
-</div>
-<div id="sesh">
-    <h2>Spending Limit</h2>
-    <h2 id="spendingLimit">£0</h2>
-    <button id="buyDrinkButton" type="button" onclick="buyDrink(3)">Buy Drink</button>
-</div>
-<div id="limitReached">
-    <h2 id="limitSpent">You have reached your spending limit</h2>
-    <h2>Unlock your money by passing the drunk test</h2>
-    <p id="numOfTriesLeft">Attampts Left: 3</p>
-    <button id="startGameButton" type="button" onclick="startGame()">Play Drunk Test</button>
-    <h2 id="loseMessage">Sorry you have failed the drunk test. Get yourself a taxi</h2>
-</div>
-<div id="game">
-    <h2>When the screen changes to red click as fast as possible</h2>
-    <h2 id="attemptCount">Attempt: 1</h2>
-    <h2 id="reactionTime">0</h2> Seconds <br />
-</div>
+<body onLoad="window.scroll(0, 100)">
+  <div id="flexstuff" class = "flex-container">
+    <div id="Title" class="flex-item">
+      <h1>SAFE<br>SESH</h1>
+      <img src="Monzo_logo.svg.png"/>
+    </div>
+    <div id="input" class = "flex-item">
+        <h2 id = "initMessage"> Enter your budget for tonight's sesh </h2>
+        <h2 id="winMessage">You seem sober enough to use your money responsibly</h2>
+        <input id="inputLimit" type="number" class="currency" min="0.01" max="2500.00" value="25.00" />
+        <button id="seshStartButton" class = "button" type="button" onclick="seshStart()">START SESH</button>
+    </div>
+    <div id="sesh" class = "flex-item">
+        <h2>Spending Limit</h2>
+        <h2 id="spendingLimit">£0</h2>
+        <button id="buyDrinkButton" class = "button" type="button" onclick="buyDrink(3)">Buy Drink</button>
+    </div>
+    <div id="limitReached" class = "flex-item">
+        <h2 id="limitSpent">You have reached your spending limit</h2>
+        <h2 id="gameStartMessage">Unlock your money by clicking anywhere when the box turns green</h2>
+        <h3 id="numOfTriesLeft">Attampts Left: 3</h3>
+        <button id="startGameButton" class = "button" type="button" onclick="startGame()">Play Drunk Test</button>
+        <h2 id="loseMessage">Sorry you weren't fast enough. Get yourself a taxi</h2>
+    </div>
+    <div id="game" class = "flex-item">
+        <h2>When the screen changes to red click as fast as possible</h2>
+        <h2 id="attemptCount">Attempt: 1</h2>
+        <h2 id="reactionTime">0</h2>
+    </div>
+    <div id="Desc" class="flex-item">
+        <h2> What is Safe Sesh? </h2>
+        <h3> We are here to keep your sesh safe! Working with Monzo and Uber, we allow you to set yourself a spending limit which, when reached<br>
+             will trigger a sobriety test. If passed, you can continue to spend! Otherwise, Safe Sesh will freeze your account!</h3>
+    </div>
+
+    <div id="Desc" class="flex-item">
+        <h2> How safe is Safe Sesh? </h2>
+        <h3> Our customers' safety is our number one concern, so we've been working with Uber, and are hopeful that we will be able to order you<br>
+             a ride before we freeze your account! Users would have the ability to opt out of this feature, but we wouldn't reccoment it! <br>
+             We provide our users with both a Webapp AND mobile app for IOS devices (Android support coming soon!). Both of which contain our challenging<br>
+             sobriety test!
+    </div>
+
+    <div id="Desc" class="flex-item">
+        <h2> Upcoming Features!</h2>
+        <h3> This is only the beginning for Safe Sesh, and are bursting full of ideas to implent! Some of these ideas include calibration for the sobriety test,<br>
+             which would allow for a wider range of peoples to use our app, including the elderly and people with motor disabilites! Also in progress is an audio
+             interface for the deaf, and the aforementioned Uber integration to help you home after a great sesh!
+    </div>
+
+
+  </div>
+
 </body>
 </html>
