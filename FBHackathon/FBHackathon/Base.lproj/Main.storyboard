@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HVD_Comic_Serif_Pro.otf">
+            <string>HVDComicSerifPro</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FBHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="tkO-rU-vdH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="number" translatesAutoresizingMaskIntoConstraints="NO" id="GvS-Zw-9WQ">
+                                <rect key="frame" x="36" y="137" width="302" height="127"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wnk-OZ-zmZ" customClass="SpringButton" customModule="FBHackathon" customModuleProvider="target">
+                                <rect key="frame" x="84" y="353" width="206" height="70"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="56"/>
+                                <state key="normal" title="sesh">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="shake"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startSesh:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UcE-KQ-51E"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0RH-oZ-i03" customClass="SpringLabel" customModule="FBHackathon" customModuleProvider="target">
+                                <rect key="frame" x="87" y="157" width="200" height="86"/>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="70"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="HQF-cJ-nZn">
+                                <rect key="frame" x="140" y="276" width="94" height="29"/>
+                                <connections>
+                                    <action selector="stepperValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="tVQ-hG-sso"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set a limit for your Monzo spending" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJd-Kw-wl0">
+                                <rect key="frame" x="36" y="26" width="302" height="98"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="98" id="qv0-vr-3mn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tkO-rU-vdH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="052-cI-iHr"/>
+                            <constraint firstItem="tkO-rU-vdH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0Hj-Rw-WwG"/>
+                            <constraint firstItem="HQF-cJ-nZn" firstAttribute="leading" secondItem="0RH-oZ-i03" secondAttribute="leading" constant="53" id="2fJ-P1-uU9"/>
+                            <constraint firstItem="HQF-cJ-nZn" firstAttribute="top" secondItem="0RH-oZ-i03" secondAttribute="bottom" constant="33" id="7LE-ln-BX0"/>
+                            <constraint firstItem="Wnk-OZ-zmZ" firstAttribute="centerX" secondItem="HQF-cJ-nZn" secondAttribute="centerX" id="AoW-zs-Khp"/>
+                            <constraint firstItem="GvS-Zw-9WQ" firstAttribute="centerY" secondItem="0RH-oZ-i03" secondAttribute="centerY" id="GfY-dm-LbP"/>
+                            <constraint firstItem="fJd-Kw-wl0" firstAttribute="leading" secondItem="GvS-Zw-9WQ" secondAttribute="leading" id="Jao-0R-YBl"/>
+                            <constraint firstItem="0RH-oZ-i03" firstAttribute="top" secondItem="fJd-Kw-wl0" secondAttribute="bottom" constant="33" id="Ptg-Jr-TyM"/>
+                            <constraint firstItem="GvS-Zw-9WQ" firstAttribute="centerX" secondItem="0RH-oZ-i03" secondAttribute="centerX" id="QHd-z8-hGD"/>
+                            <constraint firstItem="HQF-cJ-nZn" firstAttribute="top" secondItem="GvS-Zw-9WQ" secondAttribute="bottom" constant="12" id="S2s-WW-65M"/>
+                            <constraint firstItem="tkO-rU-vdH" firstAttribute="centerY" secondItem="Wnk-OZ-zmZ" secondAttribute="centerY" constant="-54.5" id="ZIs-gO-0og"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Wnk-OZ-zmZ" secondAttribute="bottom" constant="244" id="cRe-lM-UrH"/>
+                            <constraint firstItem="HQF-cJ-nZn" firstAttribute="centerX" secondItem="0RH-oZ-i03" secondAttribute="centerX" id="em9-k2-kkg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tkO-rU-vdH" secondAttribute="bottom" id="fiU-to-vo5"/>
+                            <constraint firstItem="GvS-Zw-9WQ" firstAttribute="leading" secondItem="tkO-rU-vdH" secondAttribute="leading" constant="36" id="iKN-3M-3UY"/>
+                            <constraint firstItem="GvS-Zw-9WQ" firstAttribute="centerX" secondItem="tkO-rU-vdH" secondAttribute="centerX" id="pBU-6C-xmj"/>
+                            <constraint firstItem="Wnk-OZ-zmZ" firstAttribute="leading" secondItem="HQF-cJ-nZn" secondAttribute="leading" constant="-56" id="pPI-un-9bl"/>
+                            <constraint firstAttribute="trailing" secondItem="tkO-rU-vdH" secondAttribute="trailing" id="rA4-xm-rOk"/>
+                            <constraint firstItem="tkO-rU-vdH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rnY-B2-OXc"/>
+                            <constraint firstItem="fJd-Kw-wl0" firstAttribute="trailing" secondItem="GvS-Zw-9WQ" secondAttribute="trailing" id="ssq-6M-HF6"/>
+                            <constraint firstItem="tkO-rU-vdH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tmi-Ch-fxc"/>
+                            <constraint firstItem="Wnk-OZ-zmZ" firstAttribute="top" secondItem="HQF-cJ-nZn" secondAttribute="bottom" constant="48" id="uku-TX-iaP"/>
+                            <constraint firstItem="GvS-Zw-9WQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="117" id="v7j-WY-A4g"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="startButton" destination="Wnk-OZ-zmZ" id="fqb-at-G8E"/>
+                        <outlet property="stepper" destination="HQF-cJ-nZn" id="BD7-XJ-US5"/>
+                        <outlet property="stepperLabel" destination="0RH-oZ-i03" id="ZKE-rf-xiq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-98.400000000000006" y="-15.742128935532236"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="zeh-QA-evv">
+            <objects>
+                <viewController storyboardIdentifier="MainVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1CD-hs-lN9" customClass="MainViewController" customModule="FBHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="isK-9B-vy5"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Cc-8u-6I2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tNc-aV-6Vs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Dnd-6v-5zY">
+                                <rect key="frame" x="0.0" y="1" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01S-Jr-MtU">
+                                <rect key="frame" x="197" y="561" width="162" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="30"/>
+                                <state key="normal" title="color tap">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="MMK-Ar-Ihk" kind="presentation" id="feK-8U-QJ7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Monzo spending is tracked here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8g-nI-gGl">
+                                <rect key="frame" x="10" y="115" width="343" height="98"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="98" id="AAL-s1-cYI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="number" translatesAutoresizingMaskIntoConstraints="NO" id="6Ry-o2-fBn">
+                                <rect key="frame" x="36" y="269" width="302" height="129"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="129" id="DXZ-yo-KJl"/>
+                                    <constraint firstAttribute="width" constant="302" id="bZb-l8-jHZ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mbc-7O-YKX">
+                                <rect key="frame" x="50" y="292" width="276" height="84"/>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="70"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQY-Ky-LX6">
+                                <rect key="frame" x="24" y="561" width="144" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="30"/>
+                                <state key="normal" title="number">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="F2P-W6-mcX" kind="presentation" id="feX-xD-xtm"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlock" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53r-FV-rGs">
+                                <rect key="frame" x="10" y="487" width="343" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="ujq-PP-C6Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Ry-o2-fBn" firstAttribute="centerY" secondItem="Mbc-7O-YKX" secondAttribute="centerY" id="5QL-Cm-oFz"/>
+                            <constraint firstItem="Dnd-6v-5zY" firstAttribute="leading" secondItem="tNc-aV-6Vs" secondAttribute="leading" id="7IP-Xb-SWo"/>
+                            <constraint firstItem="Mbc-7O-YKX" firstAttribute="centerY" secondItem="tNc-aV-6Vs" secondAttribute="centerY" id="8YF-l4-Lcf"/>
+                            <constraint firstItem="53r-FV-rGs" firstAttribute="top" secondItem="6Ry-o2-fBn" secondAttribute="bottom" constant="89" id="HS1-6p-0nz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="D8g-nI-gGl" secondAttribute="trailing" constant="6" id="MgC-Fq-p7Z"/>
+                            <constraint firstItem="Dnd-6v-5zY" firstAttribute="top" secondItem="tNc-aV-6Vs" secondAttribute="top" constant="1" id="bRj-ib-wUs"/>
+                            <constraint firstItem="5Cc-8u-6I2" firstAttribute="top" secondItem="D8g-nI-gGl" secondAttribute="bottom" constant="454" id="dQB-tR-G7W"/>
+                            <constraint firstAttribute="trailing" secondItem="Dnd-6v-5zY" secondAttribute="trailing" id="dTs-bI-iTE"/>
+                            <constraint firstItem="53r-FV-rGs" firstAttribute="leading" secondItem="D8g-nI-gGl" secondAttribute="leading" id="e4b-9s-Yxq"/>
+                            <constraint firstItem="Mbc-7O-YKX" firstAttribute="centerX" secondItem="tNc-aV-6Vs" secondAttribute="centerX" id="eXv-XH-dja"/>
+                            <constraint firstItem="6Ry-o2-fBn" firstAttribute="centerX" secondItem="tNc-aV-6Vs" secondAttribute="centerX" id="lCQ-gt-kQG"/>
+                            <constraint firstItem="D8g-nI-gGl" firstAttribute="leading" secondItem="tNc-aV-6Vs" secondAttribute="leadingMargin" constant="-6" id="mbB-Gb-vds"/>
+                            <constraint firstItem="53r-FV-rGs" firstAttribute="trailing" secondItem="D8g-nI-gGl" secondAttribute="trailing" id="pyO-nz-3iO"/>
+                            <constraint firstAttribute="bottom" secondItem="Dnd-6v-5zY" secondAttribute="bottom" constant="-1" id="sFD-CN-JB0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="amountValue" destination="Mbc-7O-YKX" id="Vsu-7d-z68"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c3s-Ie-ZOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760.79999999999995" y="-16.641679160419791"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="hGK-ua-z02">
+            <objects>
+                <viewController id="F2P-W6-mcX" customClass="GameViewController" customModule="FBHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WpY-iz-sWI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bh8-Gx-V4H"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gMk-nd-bQe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="x2L-HP-SSH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time" translatesAutoresizingMaskIntoConstraints="NO" id="TgZ-Zx-DTw">
+                                <rect key="frame" x="113" y="28" width="149" height="50"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCQ-9N-xhL">
+                                <rect key="frame" x="123" y="35" width="84" height="35"/>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="number" translatesAutoresizingMaskIntoConstraints="NO" id="wmC-2u-GrW">
+                                <rect key="frame" x="33" y="190" width="302" height="129"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2345" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDa-pF-AAI">
+                                <rect key="frame" x="104" y="213" width="149" height="82"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="1QV-k7-2VP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="70"/>
+                                <color key="textColor" red="0.45098039220000002" green="0.23921568630000001" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" background="input" translatesAutoresizingMaskIntoConstraints="NO" id="Tck-eK-5K1">
+                                <rect key="frame" x="61" y="326" width="255" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="0i9-G9-fNB"/>
+                                </constraints>
+                                <color key="textColor" red="0.34369188550000002" green="0.58053374290000004" blue="0.99866056439999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="72"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subtract 1 from each of the digits. So, 2345 becomes 1234." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cv8-Ne-uV1">
+                                <rect key="frame" x="23" y="84" width="330" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tck-eK-5K1" firstAttribute="centerX" secondItem="wmC-2u-GrW" secondAttribute="centerX" constant="4.5" id="6de-Ya-F1n"/>
+                            <constraint firstItem="x2L-HP-SSH" firstAttribute="leading" secondItem="gMk-nd-bQe" secondAttribute="leading" id="8u2-Sa-p41"/>
+                            <constraint firstItem="MCQ-9N-xhL" firstAttribute="top" secondItem="WpY-iz-sWI" secondAttribute="bottom" constant="15" id="By9-XC-f4U"/>
+                            <constraint firstItem="WDa-pF-AAI" firstAttribute="centerX" secondItem="wmC-2u-GrW" secondAttribute="centerX" constant="-5" id="CZI-WU-AaW"/>
+                            <constraint firstItem="Tck-eK-5K1" firstAttribute="top" secondItem="wmC-2u-GrW" secondAttribute="bottom" constant="7" id="DBT-dQ-4Uk"/>
+                            <constraint firstItem="wmC-2u-GrW" firstAttribute="top" secondItem="TgZ-Zx-DTw" secondAttribute="bottom" constant="112" id="FVj-Kg-084"/>
+                            <constraint firstItem="WDa-pF-AAI" firstAttribute="leading" secondItem="gMk-nd-bQe" secondAttribute="leadingMargin" constant="88" id="JUd-oY-Iet"/>
+                            <constraint firstAttribute="trailing" secondItem="x2L-HP-SSH" secondAttribute="trailing" id="KQ6-Ht-SeL"/>
+                            <constraint firstItem="MCQ-9N-xhL" firstAttribute="centerY" secondItem="TgZ-Zx-DTw" secondAttribute="centerY" id="PuU-aJ-PbH"/>
+                            <constraint firstItem="TgZ-Zx-DTw" firstAttribute="top" secondItem="WpY-iz-sWI" secondAttribute="bottom" constant="8" symbolic="YES" id="Q7s-Zz-9Uh"/>
+                            <constraint firstItem="MCQ-9N-xhL" firstAttribute="leading" secondItem="x2L-HP-SSH" secondAttribute="leading" constant="123" id="aKG-Ic-07f"/>
+                            <constraint firstItem="x2L-HP-SSH" firstAttribute="top" secondItem="gMk-nd-bQe" secondAttribute="top" id="aqP-9m-Qys"/>
+                            <constraint firstItem="MCQ-9N-xhL" firstAttribute="centerX" secondItem="x2L-HP-SSH" secondAttribute="centerX" constant="-22.5" id="bs6-KN-hsi"/>
+                            <constraint firstItem="TgZ-Zx-DTw" firstAttribute="centerX" secondItem="x2L-HP-SSH" secondAttribute="centerX" id="jdO-eO-f7t"/>
+                            <constraint firstItem="x2L-HP-SSH" firstAttribute="top" secondItem="MCQ-9N-xhL" secondAttribute="bottom" constant="-70" id="lFa-BO-yv8"/>
+                            <constraint firstItem="Bh8-Gx-V4H" firstAttribute="top" secondItem="x2L-HP-SSH" secondAttribute="bottom" id="lwh-9l-OMJ"/>
+                            <constraint firstItem="Tck-eK-5K1" firstAttribute="leading" secondItem="wmC-2u-GrW" secondAttribute="leading" constant="28" id="mgo-Ri-bxV"/>
+                            <constraint firstItem="wmC-2u-GrW" firstAttribute="centerY" secondItem="WDa-pF-AAI" secondAttribute="centerY" id="zwr-7E-zoh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputField" destination="Tck-eK-5K1" id="B2u-4P-bcT"/>
+                        <outlet property="numbersLabel" destination="WDa-pF-AAI" id="bBJ-BE-dcg"/>
+                        <outlet property="timeLabel" destination="MCQ-9N-xhL" id="EVw-eF-gcz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5bw-pk-wbc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1639" y="-16"/>
+        </scene>
+        <!--Color Tap View Controller-->
+        <scene sceneID="E4L-w4-9X9">
+            <objects>
+                <viewController id="MMK-Ar-Ihk" customClass="ColorTapViewController" customModule="FBHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XYh-Xj-iAG"/>
+                        <viewControllerLayoutGuide type="bottom" id="bmJ-DY-Ew5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rrv-Og-3y8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGN-hL-SqB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="668"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="screenTapped:" destination="MMK-Ar-Ihk" eventType="touchUpInside" id="fhT-bq-6xv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neX-tT-B2c">
+                                <rect key="frame" x="5" y="108" width="365" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Try # / 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGL-N0-QK4">
+                                <rect key="frame" x="77" y="28" width="221" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Result: 0 s" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGt-46-ztq">
+                                <rect key="frame" x="16" y="229" width="343" height="210"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="colorLabel" destination="neX-tT-B2c" id="LCf-dl-iFU"/>
+                        <outlet property="result" destination="sGt-46-ztq" id="oub-Gg-ziE"/>
+                        <outlet property="tryNumber" destination="mGL-N0-QK4" id="iwK-WV-0TW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8x1-gc-fEK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="761" y="743"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="375" height="667"/>
+        <image name="input" width="256" height="109"/>
+        <image name="number" width="302" height="129"/>
+        <image name="time" width="149" height="50"/>
+    </resources>
+</document>
