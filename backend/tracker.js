@@ -22,6 +22,7 @@ class Tracker {
     }
 
     notifyUser() {
+        console.log("Sending notification...");
         request.post({
             url:"https://api.monzo.com/feed",
             form: {
