@@ -49,7 +49,7 @@ app.get("/amountleft", function(req, res) {
     }
     else {
         console.log("Giving amount for account " + acc_id);
-        let amount = trackers.moneyToSpend;
+        let amount = trackers[acc_id].moneyToSpend;
         res.send(JSON.stringify({account_id:acc_id, amount:amount}))
     }
 });
