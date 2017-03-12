@@ -14,11 +14,9 @@ app.use(cookieSession({
     maxAge: 24 * 60 * 60 * 1000 // 24 hours
 }));
 
-app.get("/", function(req,res) {
-    res.send("Works");
-});
-
 app.use(bodyParser.json());
+
+app.use(express.static("test_public"));
 
 let trackers = {};
 
@@ -27,19 +25,21 @@ app.post("/start", function(req, res) {
     console.log("Body: " + JSON.stringify(req.body));
 
     let accId = req.body.account_id;
-    let secretToken = req.body.secret_token;
     if(accId in trackers) {
+        console.log(`Account id ${accId} already in trackers`);
         res.sendStatus(400);
     }
     else {
-        trackers[accId] = new Tracker(secretToken, accId);
+        let secretToken = req.body.secret_token;
+        let amount = req.body.amount;
+        trackers[accId] = new Tracker(secretToken, accId, amount);
         trackers[accId].registerWebHook();
         req.session.account_id = accId;
         res.sendStatus(200);
     }
 });
 
-app.post("/hookEndPoint", function(req, res) {
+app.post("/hookhandle", function(req, res) {
     let account_id = app.body.data.account_id;
     if(!(account_id in trackers)) {
         console.err("Got callback from something not in our tracker");
@@ -51,11 +51,6 @@ app.post("/hookEndPoint", function(req, res) {
             console.log("Drinking logged");
         }
     }
-});
-
-app.post("/monzoMock", function(req, res) {
-     console.log("Webhook received: " + JSON.stringify(req.body));
-     res.sendStatus(200);
 });
 
 app.post("/quit", function(req, res) {
