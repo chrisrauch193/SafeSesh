@@ -210,22 +210,23 @@ function retriever() {
         type:"GET"
         url:"http://ungurianu.com/safesesh/amountleft?account_id=" + USER_ID,
         dataType:"json"
-    },function(data, status) {
-        spendingLimit = data.amount / 100;
-        //Code for when transaction is made
-        $('#spendingLimit').html("£" + spendingLimit);
-        if (spendingLimit < 1) {
-            abortTimer();
-            canBuyDrinks = false;
-            $('#input').hide();
-            $('#sesh').hide();
-            $('#limitReached').show();
-            $('#game').hide();
-            $('#loseMessage').hide();
-            $('#numOfTriesLeft').html("Attempts Left:" + numOfTries);
-        }
+        success: function(data, status) {
+            spendingLimit = data.amount / 100;
+            //Code for when transaction is made
+            $('#spendingLimit').html("£" + spendingLimit);
+            if (spendingLimit < 1) {
+                abortTimer();
+                canBuyDrinks = false;
+                $('#input').hide();
+                $('#sesh').hide();
+                $('#limitReached').show();
+                $('#game').hide();
+                $('#loseMessage').hide();
+                $('#numOfTriesLeft').html("Attempts Left:" + numOfTries);
+            }
 
-        tid = setTimeout(retriever,2000);
+            tid = setTimeout(retriever,2000);
+        }
     });
 }
 function abortTimer() { // to be called when you want to stop the timer
