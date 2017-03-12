@@ -40,6 +40,7 @@ app.post("/start", function(req, res) {
 });
 
 app.get("/amountleft", function(req, res) {
+    console.log("Url received: " + req.url);
     var acc_id = req.query.account_id;
 
     if(!(account_id in trackers)) {
