@@ -39,6 +39,10 @@ app.post("/start", function(req, res) {
     }
 });
 
+app.get("/amountleft", function(req, res) {
+    var acc_id = req.query.account_id;
+});
+
 app.post("/hookhandle", function(req, res) {
     console.log("Body: " + JSON.stringify(req.body));
     let account_id = req.body.data.account_id;

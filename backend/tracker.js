@@ -3,6 +3,10 @@ const request = require("request");
 
 const hookPoint = "http://ungurianu.com/safesesh/hookhandle/";
 
+const printBody = (err, res, body) => {
+    console.log("Body: " + body);
+}
+
 class Tracker {
     constructor(token, accId, moneyToSpend) {
         this.token = token;
@@ -12,12 +16,31 @@ class Tracker {
 
     updateMoney(by) {
         this.moneyToSpend += by;
+        if(this.moneyToSpend <= 0) {
+            notifyUser();
+        }
+    }
+
+    notifyUser() {
+        request.post({
+            url:"https://api.monzo.com/feed",
+            form: {
+                account_id:this.accId,
+                type:"basic",
+                "params[title]":"Stop drinking, you idiot",
+                "params[image_url]":"https://media.giphy.com/media/6vWVzDv19i3MQ/giphy.gif",
+                "params[background_color]":"#FCF1EE",
+                "params[body_color]":"#FCF1EE",
+                "params[title_color]":"#333",
+                "params[body]":"You should go home, buddy"
+            },
+            auth: {
+                bearer:this.token
+            }
+        },printBody);
     }
 
     registerWebHook() {
-        let printBody = (err, res, body) => {
-            console.log("Body: " + body);
-        }
 
         let addHookIfNotFound = (err, res, body) => {
             let webhooks = JSON.parse(body).webhooks;
