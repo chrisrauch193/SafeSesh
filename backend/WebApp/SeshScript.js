@@ -19,8 +19,8 @@ var gameMode = false;
 var missattempt = false;
 var timer;
 
-var USER_ID = "acc_00009CNhj7lD8LhVXxIhP7";
-var SECRET_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaSI6Im9hdXRoY2xpZW50XzAwMDA5NFB2SU5ER3pUM2s2dHo4anAiLCJleHAiOjE0ODkzMTQ3NzQsImlhdCI6MTQ4OTI5MzE3NCwianRpIjoidG9rXzAwMDA5SUhJeG82ZDZiVFl2VzRYUnAiLCJ1aSI6InVzZXJfMDAwMDlBS200eEFNdlpnUFQ3U21iUiIsInYiOiIyIn0.w0VXRm8vLgfjocEO9n_yi8ojYn-jEcu2wqKFzfPKueg";
+var USER_ID = "";
+var SECRET_TOKEN = "";
 
 function resetPage() {
     startingBalance = 0;
