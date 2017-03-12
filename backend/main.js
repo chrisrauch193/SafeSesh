@@ -68,11 +68,11 @@ app.post("/hookhandle", function(req, res) {
             let amount = req.body.data.amount
             if(amount < 0) {
                 console.log("This costed £" + (-amount) / 100);
+                tracker.updateMoney(req.body.data.amount);
             }
             else {
                 console.log("This earned us £" + amount / 100);
             }
-            tracker.updateMoney(req.body.data.amount);
             if(tracker.moneyToSpend <= 0) {
                 delete trackers[account_id];
             }
