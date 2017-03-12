@@ -207,10 +207,11 @@ function losePage() {
 function retriever() {
     //Do code here
     $.ajax( {
+        type:"GET"
         url:"http://ungurianu.com/safesesh/amountleft?account_id=" + USER_ID,
         dataType:"json"
     },function(data, status) {
-        spendingLimit = data.amount;
+        spendingLimit = data.amount / 100;
         //Code for when transaction is made
         $('#spendingLimit').html("£" + spendingLimit);
         if (spendingLimit < 1) {
